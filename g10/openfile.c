@@ -321,6 +321,7 @@ get_matching_datafile (const char *sigfilename)
   if (len > 4
       && (!strcmp (sigfilename + len - 4, EXTSEP_S "sig")
           || (len > 5 && !strcmp(sigfilename + len - 5, EXTSEP_S "sign"))
+          || !strcmp(sigfilename + len - 4, EXTSEP_S "gpg")
           || !strcmp(sigfilename + len - 4, EXTSEP_S "asc")))
     {
 
